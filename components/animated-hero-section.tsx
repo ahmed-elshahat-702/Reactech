@@ -3,6 +3,7 @@
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { projects } from "@/lib/consts";
 
 export default function AnimatedHeroSection() {
   const containerVariants: Variants = {
@@ -120,7 +121,7 @@ export default function AnimatedHeroSection() {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: "5+", label: "Projects Delivered" },
+              { value: `${projects.length}+`, label: "Projects Delivered" },
               { value: "90%", label: "Client Satisfaction" },
               { value: "3+", label: "Years Experience" },
               { value: "24/7", label: "Support Available" },

@@ -1,48 +1,10 @@
-"use client"
+"use client";
 
-import ProjectCard from "@/components/project-card"
-import { motion } from "framer-motion"
+import ProjectCard from "@/components/project-card";
+import { projects } from "@/lib/consts";
+import { motion } from "framer-motion";
 
 export default function PortfolioPage() {
-  const projects = [
-    {
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce solution with real-time inventory and seamless checkout experience.",
-      image: "/modern-ecommerce-dashboard.png",
-      tags: ["Next.js", "TypeScript", "Stripe"],
-    },
-    {
-      title: "SaaS Dashboard",
-      description: "Analytics dashboard with real-time data visualization and comprehensive reporting.",
-      image: "/analytics-dashboard-dark-theme.png",
-      tags: ["React", "D3.js", "Node.js"],
-    },
-    {
-      title: "Mobile App",
-      description: "Cross-platform mobile application with native performance and smooth animations.",
-      image: "/mobile-app-interface.png",
-      tags: ["React Native", "Firebase", "Redux"],
-    },
-    {
-      title: "Healthcare Portal",
-      description: "HIPAA-compliant patient management system with telemedicine capabilities.",
-      image: "/healthcare-medical-dashboard.jpg",
-      tags: ["Next.js", "PostgreSQL", "WebRTC"],
-    },
-    {
-      title: "Real Estate Platform",
-      description: "Property listing platform with advanced search and virtual tour features.",
-      image: "/real-estate-property-listing.jpg",
-      tags: ["React", "GraphQL", "Mapbox"],
-    },
-    {
-      title: "Education LMS",
-      description: "Learning management system with video streaming and progress tracking.",
-      image: "/education-learning-platform.png",
-      tags: ["Next.js", "MongoDB", "AWS"],
-    },
-  ]
-
   return (
     <main className="min-h-screen pt-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -56,7 +18,8 @@ export default function PortfolioPage() {
             Our <span className="text-gradient">Portfolio</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
-            Explore our collection of successful projects across various industries and technologies
+            Explore our collection of successful projects across various
+            industries and technologies
           </p>
         </motion.div>
 
@@ -74,5 +37,5 @@ export default function PortfolioPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

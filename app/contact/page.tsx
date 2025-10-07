@@ -17,6 +17,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
 
 export default function ContactPage() {
   // Zod schema for form validation
@@ -215,7 +216,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
-                  <a
+                  <Link
                     key={index}
                     href={info.link}
                     className="flex items-start gap-4 group"
@@ -231,7 +232,7 @@ export default function ContactPage() {
                         {info.value}
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

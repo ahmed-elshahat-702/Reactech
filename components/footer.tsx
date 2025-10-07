@@ -52,21 +52,21 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
-              <a
+              <Link
                 href="mailto:reactech.eg@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
                 reactech.eg@gmail.com
-              </a>
-              <a
+              </Link>
+              <Link
                 href="tel:+1234567890"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone size={18} />
                 +201027927418
-              </a>
-              <a
+              </Link>
+              <Link
                 href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -74,7 +74,7 @@ export default function Footer() {
               >
                 <MessageCircle size={18} />
                 WhatsApp
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -104,14 +104,14 @@ export default function Footer() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {navigation.social.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-muted-foreground hover:text-primary transition-colors"
                 aria-label={item.name}
               >
                 <item.icon size={20} />
-              </a>
+              </Link>
             ))}
           </div>
         </div>

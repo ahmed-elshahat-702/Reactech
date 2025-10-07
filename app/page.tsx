@@ -2,6 +2,7 @@
 
 import AnimatedHeroSection from "@/components/animated-hero-section";
 import ProjectCard from "@/components/project-card";
+import { projects } from "@/lib/consts";
 import { motion } from "framer-motion";
 import { Code, Palette, Zap, Shield, Users, Rocket } from "lucide-react";
 import Link from "next/link";
@@ -48,28 +49,7 @@ export default function HomePage() {
     },
   ];
 
-  const featuredProjects = [
-    {
-      title: "E-Commerce Platform",
-      description:
-        "A modern e-commerce solution with real-time inventory and seamless checkout.",
-      image: "/modern-ecommerce-dashboard.png",
-      tags: ["Next.js", "TypeScript", "Stripe"],
-    },
-    {
-      title: "SaaS Dashboard",
-      description:
-        "Analytics dashboard with real-time data visualization and reporting.",
-      image: "/analytics-dashboard-dark-theme.png",
-      tags: ["React", "D3.js", "Node.js"],
-    },
-    {
-      title: "Mobile App",
-      description: "Cross-platform mobile application with native performance.",
-      image: "/mobile-app-interface.png",
-      tags: ["React Native", "Firebase", "Redux"],
-    },
-  ];
+  const featuredProjects = projects.filter((project) => project.featured);
 
   return (
     <main className="min-h-screen">
