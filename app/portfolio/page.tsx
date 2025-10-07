@@ -53,7 +53,7 @@ export default function PortfolioPage() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-balance">
-            Our <span className="text-primary">Portfolio</span>
+            Our <span className="text-gradient">Portfolio</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
             Explore our collection of successful projects across various industries and technologies

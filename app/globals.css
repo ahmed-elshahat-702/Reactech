@@ -13,6 +13,7 @@
   --popover-foreground: oklch(0.141 0.005 285.823);
   --primary: oklch(0.623 0.214 259.815);
   --primary-foreground: oklch(0.97 0.014 254.604);
+  --pink: oklch(68.97% 0.31992 326.621);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
@@ -120,5 +121,13 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  .text-gradient{
+    @apply w-fit bg-clip-text text-transparent bg-gradient-to-r from-primary to-pink-400
+  }
+
+  .bg-gradient{
+    @apply bg-gradient-to-r from-primary to-pink-400 text-white hover:opacity-85 transition-colors
   }
 }

@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="text-primary">Reactech</span>
+              <span className="text-gradient">Reactech</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Building premium web experiences with cutting-edge technology and exceptional design.
