@@ -67,7 +67,7 @@ export default function AnimatedHeroSection() {
             variants={itemVariants}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance"
           >
-            Building the Future of the <span className="text-primary">Web</span>
+            Building the Future of the <span className="text-gradient">Web</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -87,7 +87,7 @@ export default function AnimatedHeroSection() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-all font-medium text-lg shadow-lg shadow-primary/20"
+                className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient rounded-full  transition-all font-medium text-lg shadow-lg shadow-primary/20"
               >
                 Start Your Project
                 <motion.span

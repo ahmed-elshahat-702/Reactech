@@ -88,7 +88,7 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">
-              Our <span className="text-primary">Services</span>
+              Our <span className="text-gradient">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
               Comprehensive web development solutions tailored to your business
@@ -127,7 +127,7 @@ export default function HomePage() {
           >
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient rounded-full  transition-colors font-medium"
             >
               View All Services
             </Link>
@@ -146,7 +146,7 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">
-              Why Choose <span className="text-primary">Reactech</span>
+              Why Choose <span className="text-gradient">Reactech</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
               We combine speed, quality, and expertise to deliver exceptional
@@ -188,7 +188,7 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">
-              Featured <span className="text-primary">Projects</span>
+              Featured <span className="text-gradient">Projects</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
               Showcasing our best work and successful client partnerships
@@ -218,7 +218,7 @@ export default function HomePage() {
           >
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-medium"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient rounded-full transition-colors font-medium"
             >
               View Full Portfolio
             </Link>
@@ -234,7 +234,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-12 text-center"
+            className="bg-gradient-to-r from-primary/10 via-background to-pink-500/10 border border-primary/20 rounded-2xl p-12 text-center"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
               Ready to Start Your Project?
@@ -245,7 +245,7 @@ export default function HomePage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-medium text-lg"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient  rounded-full transition-colors font-medium text-lg"
             >
               Get Started Now
             </Link>

@@ -123,7 +123,7 @@ export default function ServicesPage() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-balance">
-            Our <span className="text-primary">Services</span>
+            Our <span className="text-gradient">Services</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
             Comprehensive web development solutions designed to help your
@@ -168,7 +168,7 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 border border-primary/20 rounded-2xl p-12 text-center"
+          className="bg-gradient-to-r from-primary/10 via-background to-pink-500/10 border border-primary/20 rounded-2xl p-12 text-center"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-balance">
             Ready to Get Started?
@@ -179,7 +179,7 @@ export default function ServicesPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-medium text-lg"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient rounded-full hover:bg-primary/90 transition-colors font-medium text-lg"
           >
             Contact Us Today
           </Link>

@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useTheme } from "./theme-provider";
+import { cn } from "@/lib/utils";
+import { Button, buttonVariants } from "./ui/button";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,13 +33,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold"
-            >
-              <span className="text-primary">Reactech</span>
-            </motion.div>
+          <Link href="/" className="text-gradient text-2xl font-bold">Reactech
           </Link>
 
           {/* Desktop Navigation */}
@@ -50,13 +46,13 @@ export default function Navbar() {
                   href={item.href}
                   className={`transition-colors relative group ${
                     isActive
-                      ? "text-primary font-medium"
+                      ? "text-gradient font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -64,30 +60,43 @@ export default function Navbar() {
               );
             })}
 
-            <button
+            <Button
               onClick={toggleTheme}
+              variant="ghost"
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
               {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+            </Button>
 
             <Link
               href="/contact"
-              className="px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-medium"
+              className={cn(buttonVariants(), "bg-gradient rounded-full ")}
             >
               Get Started
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <Button
+              onClick={toggleTheme}
+              variant={"ghost"}
+              className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="Toggle theme"
+            >
+              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            </Button>
+
+            <Button
+              onClick={() => setIsOpen(!isOpen)}
+              variant={"ghost"}
+              className="md:hidden text-foreground"
+              aria-label="Toggle menu"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
@@ -107,7 +116,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block transition-colors ${
                     isActive
-                      ? "text-primary font-medium"
+                      ? "text-gradient font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
@@ -116,30 +125,10 @@ export default function Navbar() {
               );
             })}
 
-            <div className="flex items-center gap-4 pt-2">
-              <a
-                href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <MessageCircle size={20} />
-                <span>WhatsApp</span>
-              </a>
-              <button
-                onClick={toggleTheme}
-                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                aria-label="Toggle theme"
-              >
-                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-                <span>{theme === "dark" ? "Light" : "Dark"}</span>
-              </button>
-            </div>
-
             <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center px-6 py-2 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors font-medium"
+              className="block w-full text-center px-6 py-2 bg-gradient rounded-full transition-colors font-medium "
             >
               Get Started
             </Link>

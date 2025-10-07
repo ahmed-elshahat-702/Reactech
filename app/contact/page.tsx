@@ -60,7 +60,7 @@ export default function ContactPage() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl sm:text-6xl font-bold mb-6 text-balance">
-            Get in <span className="text-primary">Touch</span>
+            Get in <span className="text-gradient">Touch</span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
             Have a project in mind? Let&apos;s discuss how we can help bring
@@ -155,7 +155,7 @@ export default function ContactPage() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-gradient rounded-lg hover:bg-primary/90 transition-colors font-medium"
               >
                 Send Message
                 <Send size={18} />
@@ -192,15 +192,6 @@ export default function ContactPage() {
                     </div>
                   </a>
                 ))}
-              </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20 rounded-lg p-8">
-              <h3 className="text-xl font-bold mb-4">Office Hours</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
               </div>
             </div>
 
