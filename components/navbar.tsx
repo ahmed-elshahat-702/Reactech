@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { useTheme } from "./theme-provider";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
+import { ThemeToggler } from "./ThemeToggler";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
-  const { theme, toggleTheme } = useTheme();
 
   const navItems = [
     { name: "Home", href: "/" },
@@ -60,14 +59,7 @@ export default function Navbar() {
               );
             })}
 
-            <Button
-              onClick={toggleTheme}
-              variant="ghost"
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </Button>
+            <ThemeToggler />
 
             <Link
               href="/contact"
@@ -79,14 +71,7 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            <Button
-              onClick={toggleTheme}
-              variant={"ghost"}
-              className="md:hidden text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </Button>
+            <ThemeToggler />
 
             <Button
               onClick={() => setIsOpen(!isOpen)}
