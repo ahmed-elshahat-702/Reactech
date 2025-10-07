@@ -1,5 +1,12 @@
-import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, Phone, MessageCircle } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+  Phone,
+  MessageCircle,
+} from "lucide-react";
 
 export default function Footer() {
   const navigation = {
@@ -10,13 +17,21 @@ export default function Footer() {
       { name: "Contact", href: "/contact" },
     ],
     social: [
-      { name: "Facebook", icon: Facebook, href: "#" },
-      { name: "Instagram", icon: Instagram, href: "#" },
-      { name: "LinkedIn", icon: Linkedin, href: "#" },
+      {
+        name: "Facebook",
+        icon: Facebook,
+        href: "http://facebook.com/profile.php?id=61581516043531",
+      },
+      {
+        name: "Instagram",
+        icon: Instagram,
+        href: "https://www.instagram.com/reactech.eg/",
+      },
+      // { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/company/reactech-eg/" },
     ],
-  }
+  };
 
-  const whatsappNumber = "+1234567890"
+  const whatsappNumber = "+201027927418";
 
   return (
     <footer className="bg-card border-t border-border">
@@ -28,7 +43,8 @@ export default function Footer() {
               <span className="text-gradient">Reactech</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
-              Building premium web experiences with cutting-edge technology and exceptional design.
+              Building premium web experiences with cutting-edge technology and
+              exceptional design.
             </p>
           </div>
 
@@ -37,18 +53,18 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
               <a
-                href="mailto:hello@reactech.com"
+                href="mailto:reactech.eg@gmail.com"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail size={18} />
-                hello@reactech.com
+                reactech.eg@gmail.com
               </a>
               <a
                 href="tel:+1234567890"
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone size={18} />
-                +1 (234) 567-890
+                +201027927418
               </a>
               <a
                 href={`https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}`}
@@ -81,7 +97,9 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm">© {new Date().getFullYear()} Reactech. All rights reserved.</p>
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Reactech. All rights reserved.
+          </p>
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
@@ -99,5 +117,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -29,39 +29,16 @@ export default function ServicesPage() {
     },
     {
       icon: Palette,
-      title: "UI/UX Design",
-      description:
-        "Beautiful, intuitive interfaces that users love. We combine aesthetics with functionality to create memorable digital experiences.",
-      features: [
-        "User Interface Design",
-        "User Experience Research",
-        "Prototyping & Wireframing",
-        "Design Systems",
-      ],
+      title: "Logo/Identity Design",
+      description: "Logo, Branding, and Identity Design",
+      features: ["Logo Design", "Branding", "Identity Design"],
     },
     {
       icon: Smartphone,
       title: "Mobile Development",
       description:
         "Native and cross-platform mobile applications that deliver exceptional performance and user experience on iOS and Android.",
-      features: [
-        "React Native Apps",
-        "iOS & Android Development",
-        "App Store Deployment",
-        "Mobile UI/UX",
-      ],
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description:
-        "Scalable cloud infrastructure and deployment solutions. We help you leverage the power of modern cloud platforms.",
-      features: [
-        "AWS & Vercel Deployment",
-        "CI/CD Pipelines",
-        "Cloud Architecture",
-        "Performance Optimization",
-      ],
+      features: ["React Native Apps", "iOS & Android Development"],
     },
     {
       icon: Search,
@@ -73,18 +50,6 @@ export default function ServicesPage() {
         "Performance Optimization",
         "Meta Tags & Schema",
         "Analytics Setup",
-      ],
-    },
-    {
-      icon: ShoppingCart,
-      title: "E-Commerce Solutions",
-      description:
-        "Complete e-commerce platforms with payment processing, inventory management, and seamless checkout experiences.",
-      features: [
-        "Stripe Integration",
-        "Shopping Cart Systems",
-        "Inventory Management",
-        "Order Processing",
       ],
     },
     {

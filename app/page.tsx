@@ -16,15 +16,14 @@ export default function HomePage() {
     },
     {
       icon: Palette,
-      title: "UI/UX Design",
-      description:
-        "Beautiful, intuitive interfaces that users love and businesses need.",
+      title: "Logo/Identity Design",
+      description: "Logo, Branding, and Identity Design",
     },
     {
       icon: Zap,
-      title: "Performance",
+      title: "Performance / SEO",
       description:
-        "Lightning-fast websites optimized for speed and user experience.",
+        "Lightning-fast websites optimized for speed and user experience. SEO Optimization.",
     },
   ];
 

@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "./ui/button";
 import { ThemeToggler } from "./ThemeToggler";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,7 +33,24 @@ export default function Navbar() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="text-gradient text-2xl font-bold">Reactech
+          <Link
+            href="/"
+            className="text-gradient text-2xl font-bold flex items-center gap-2"
+          >
+            <Image
+              src="/icon.png"
+              alt="logo"
+              width={50}
+              height={50}
+              className="sm:hidden"
+            />
+            <Image
+              src="/name.png"
+              alt="logo"
+              width={130}
+              height={130}
+              className="max-sm:hidden"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -45,13 +63,13 @@ export default function Navbar() {
                   href={item.href}
                   className={`transition-colors relative group ${
                     isActive
-                      ? "text-gradient font-medium"
+                      ? "text-primary font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient transition-all duration-300 ${
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -101,7 +119,7 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block transition-colors ${
                     isActive
-                      ? "text-gradient font-medium"
+                      ? "text-primary font-medium"
                       : "text-muted-foreground hover:text-foreground"
                   }`}
                 >

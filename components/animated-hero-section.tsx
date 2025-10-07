@@ -1,11 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function AnimatedHeroSection() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,14 +16,15 @@ export default function AnimatedHeroSection() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut",
+        // cubic-bezier equivalent to easeOut to satisfy typing
+        ease: [0.16, 1, 0.3, 1],
       },
     },
   };
@@ -67,7 +68,8 @@ export default function AnimatedHeroSection() {
             variants={itemVariants}
             className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance"
           >
-            Building the Future of the <span className="text-gradient">Web</span>
+            Building the Future of the{" "}
+            <span className="text-gradient">Web</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -118,9 +120,9 @@ export default function AnimatedHeroSection() {
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { value: "50+", label: "Projects Delivered" },
-              { value: "98%", label: "Client Satisfaction" },
-              { value: "5+", label: "Years Experience" },
+              { value: "5+", label: "Projects Delivered" },
+              { value: "90%", label: "Client Satisfaction" },
+              { value: "3+", label: "Years Experience" },
               { value: "24/7", label: "Support Available" },
             ].map((stat, index) => (
               <motion.div
