@@ -7,6 +7,7 @@ import {
   Phone,
   MessageCircle,
 } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const navigation = {
@@ -40,7 +41,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold mb-4">
-              <span className="text-gradient">Reactech</span>
+              <Image
+                src="/name.png"
+                alt="Reactech Logo"
+                width={120}
+                height={40}
+              />
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Building premium web experiences with cutting-edge technology and

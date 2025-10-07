@@ -18,6 +18,7 @@ import { toast } from "sonner";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function ContactPage() {
   // Zod schema for form validation
@@ -73,7 +74,7 @@ export default function ContactPage() {
       reset();
     } catch (error) {
       console.error("EmailJS error:", error);
-      toast("", {
+      toast("Email failed to send.", {
         icon: <XCircle className="w-4 h-4" />,
       });
     }
