@@ -157,54 +157,59 @@ export default function HomePage() {
       </section>
 
       {/* Featured Projects */}
-      <section className="py-24 bg-card/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">
-              Featured <span className="text-gradient">Projects</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              Showcasing our best work and successful client partnerships
-            </p>
-          </motion.div>
+     {/* Featured Projects */}
+<section className="py-24 bg-card/50">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-balance">
+        Featured <span className="text-gradient">Projects</span>
+      </h2>
+      <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
+        A hand-picked selection of our best work
+      </p>
+    </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <ProjectCard {...project} />
-              </motion.div>
-            ))}
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {featuredProjects.slice(0, 6).map((project, index) => (
+        <motion.div
+          key={project.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+        >
+          <ProjectCard {...project} />
+        </motion.div>
+      ))}
+    </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center mt-12"
-          >
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient rounded-full transition-colors font-medium"
-            >
-              View Full Portfolio
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.4 }}
+      className="text-center mt-12"
+    >
+      <p className="text-muted-foreground mb-4 text-sm">
+        {projects.length - 6 > 0
+          ? `+${projects.length - 6} more projects in the full portfolio`
+          : ""}
+      </p>
+      <Link
+        href="/portfolio"
+        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient rounded-full transition-colors font-medium"
+      >
+        View Full Portfolio →
+      </Link>
+    </motion.div>
+  </div>
+</section>
       {/* CTA Section */}
       <section className="py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
