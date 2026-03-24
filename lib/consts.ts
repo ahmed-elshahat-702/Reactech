@@ -59,7 +59,7 @@ export const projects: Project[] = [
   {
     title: "Saloon sineen",
     description: "A full-stack clean and modern cosmetics E-commerce with Products, Services, Points for each purchase, wishList, contact & aboutUs.",
-    image: "/projects/salon-sineen.png?height=300&width=400",
+    image: "/projects/Salon-sineen.png?height=300&width=400",
     technologies: ["Next", "Tailwind CSS", "Framer Motion", "Zod", "Zustand", "Supabase", "Next-intl"],
     demo: "https://salon-sineen.vercel.app/ar",
     featured: true,
