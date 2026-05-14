@@ -60,26 +60,26 @@ export default function AnimatedHeroSection() {
           {/* Tagline */}
           <motion.div variants={itemVariants} className="mb-6">
             <span className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-sm font-mono">
-              Premium Web Development
+              Your Business Deserves a Better Website
             </span>
           </motion.div>
 
           {/* Main Heading */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance"
-          >
-            Building the Future of the{" "}
-            <span className="text-gradient">Web</span>
-          </motion.h1>
+<motion.h1
+  variants={itemVariants}
+  className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance"
+>
+  More Customers.{" "}
+  More Bookings.{" "}
+  <span className="text-gradient">More Sales.</span>
+</motion.h1>
 
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
             className="text-xl sm:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto text-pretty leading-relaxed"
           >
-            Empower your business with high-quality, lightning-fast web
-            applications built with React and Next.js
+            We build websites that work for your business 24/7 — bringing in customers while you focus on running things.
           </motion.p>
 
           {/* CTA Buttons */}
