@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import WhatsAppButton from "@/components/whatsapp-button";
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -19,7 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Reactech - Premium Web Development",
   description:
-    "Specializing in high-quality web development with React and Next.js",
+    "Specializing in high-quality web development for restaurants, hotels, patisseries, and businesses across Egypt. Built with React and Next.js.",
   generator: "v0.app",
 };
 
@@ -46,6 +47,8 @@ export default function RootLayout({
             {children}
             <Footer />
           </main>
+          {/* WhatsApp sticky button — appears on every page */}
+          <WhatsAppButton />
           <Toaster />
         </ThemeProvider>
       </body>
